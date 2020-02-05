@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <div class="middle">
+        <b-form @submit="onSend" @reset="onReset" v-if="show">
+          <b-form-group
+            id="input-group-1"
+            label="Email address:"
+            label-for="input-1"
+            description="We'll never share your email with anyone else."
+          >
+            <b-form-input
+              id="input-1"
+              v-model="form.email"
+              type="email"
+              required
+              placeholder="Enter email"
+            ></b-form-input>
+          </b-form-group>
+    
+          <b-form-group id="input-group-2" label="Password:" label-for="input-2">
+            <b-form-input
+              id="input-2"
+              v-model="form.password"
+              type="password"
+              required
+              placeholder="Enter password"
+            ></b-form-input>
+          </b-form-group>
+    
+          <b-button type="submit" variant="primary">Submit</b-button>
+          <b-button type="reset" variant="danger">Reset</b-button>
+          <b-button type="register" variant="">Register</b-button>
+        </b-form>
+      </div>
+
+</body>
+</html>
+
+<style>
+    .middle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
